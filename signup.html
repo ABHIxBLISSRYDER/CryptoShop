@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Cryptoshop</title>
+    <link rel="stylesheet" href="signup-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-coins"></i>
+                <h1>Cryptoshop</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#markets"><i class="fas fa-chart-line"></i> Markets</a></li>
+                    <li><a href="signup.html" class="active"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Signup Section -->
+    <main class="signup-section">
+        <div class="container">
+            <div class="signup-container">
+                <div class="signup-header">
+                    <h2><i class="fas fa-user-plus"></i> Sign Up for Updates</h2>
+                    <p class="subtitle">Get the latest news, offers, and market insights from Cryptoshop</p>
+                </div>
+                
+                <form id="signup-form" class="signup-form">
+                    <div class="form-group">
+                        <label for="full-name"><i class="fas fa-user"></i> Full Name</label>
+                        <input 
+                            type="text" 
+                            id="full-name" 
+                            name="full-name" 
+                            placeholder="Enter your full name" 
+                            pattern="[A-Za-z\s]{3,50}"
+                            title="Name should contain only letters and spaces (3-50 characters)"
+                            required>
+                        <div class="hint">Please enter your full name (letters and spaces only, 3-50 characters)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Please enter a valid email address"
+                            required>
+                        <div class="hint">We'll never share your email with anyone else</div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Create a password" 
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                title="Password must contain at least 8 characters, including uppercase, lowercase, number and special character"
+                                required>
+                            <div class="hint">Minimum 8 characters with uppercase, lowercase, number & special character</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                            <input 
+                                type="password" 
+                                id="confirm-password" 
+                                name="confirm-password" 
+                                placeholder="Confirm your password" 
+                                required>
+                            <div class="hint">Re-enter your password to confirm</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Enter your phone number" 
+                            pattern="^[\+]?[1-9][\d]{0,15}$"
+                            title="Please enter a valid phone number without spaces or special characters"
+                            required>
+                        <div class="hint">Enter your phone number without spaces or special characters</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-star"></i> Interested In:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="bitcoin" name="interest" value="bitcoin" checked>
+                                <label for="bitcoin"><i class="fab fa-bitcoin"></i> Bitcoin</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="ethereum" name="interest" value="ethereum" checked>
+                                <label for="ethereum"><i class="fab fa-ethereum"></i> Ethereum</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="dogecoin" name="interest" value="dogecoin">
+                                <label for="dogecoin"><i class="fas fa-dog"></i> Dogecoin</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="gold" name="interest" value="gold">
+                                <label for="gold"><i class="fas fa-gem"></i> Gold</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="silver" name="interest" value="silver">
+                                <label for="silver"><i class="fas fa-ring"></i> Silver</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label"><i class="fas fa-chart-line"></i> Experience Level:</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="beginner" name="experience" value="beginner" checked>
+                                <label for="beginner">Beginner</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="intermediate" name="experience" value="intermediate">
+                                <label for="intermediate">Intermediate</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="pro" name="experience" value="pro">
+                                <label for="pro">Pro</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country"><i class="fas fa-globe"></i> Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="de">Germany</option>
+                            <option value="fr">France</option>
+                            <option value="jp">Japan</option>
+                            <option value="sg">Singapore</option>
+                            <option value="in">India</option>
+                            <option value="br">Brazil</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Subscribe to our weekly newsletter for market updates and trading tips</label>
+                    </div>
+                    
+                    <div class="form-group terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-paper-plane"></i> Create Account
+                    </button>
+                    
+                    <p class="form-footer">
+                        Already have an account? <a href="#">Sign In</a>
+                    </p>
+                </form>
+                
+                <div class="security-note">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Your information is secure with us. We use bank-level encryption to protect your data.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-coins"></i>
+                    <h2>Cryptoshop</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#markets">Markets</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@cryptoshop.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Crypto Street, Digital City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cryptoshop. All Rights Reserved</p>
+                <p class="disclaimer">Cryptocurrency trading involves significant risk. Please trade responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation and password matching
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                event.preventDefault();
+                return false;
+            }
+            
+            // message for user if all validations pass
+            alert('Account created successfully! Welcome to Cryptoshop.');
+        });
+        
+        // Real-time password match indicator
+        document.getElementById('confirm-password').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = this.value;
+            const confirmField = this;
+            
+            if (confirmPassword.length > 0) {
+                if (password === confirmPassword) {
+                    confirmField.style.borderColor = '#10b981';
+                } else {
+                    confirmField.style.borderColor = '#ef4444';
+                }
+            } else {
+                confirmField.style.borderColor = '#475569';
+            }
+        });
+    </script>
+</body>
+</html>
